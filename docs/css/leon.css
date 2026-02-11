@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Work sans", "Sans serif" ,"Rubik";
+  font-family: "Work sans", "Sans serif", "Rubik";
   a {
     text-decoration: none;
   }
@@ -154,7 +154,7 @@ body {
   padding: 15px;
   color: #333;
   transition: 0.3s;
-  font-weight: 600
+  font-weight: 600;
 }
 
 .header .links ul li a:hover {
@@ -169,7 +169,7 @@ body {
 .landing-page {
   width: 100%;
   height: 500px;
-  background-image: url(../images/Mountain-3.jpeg);
+  background-image: url(/images/Mountain-3.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -184,6 +184,10 @@ body {
   h1 {
     color: var(--MainColor1);
     font-size: 55.43px;
+    transition: 0.5s;
+  }
+  h1:hover {
+    text-shadow: #14f3dd 0px 0px 50px;
   }
   p {
     text-align: center;
@@ -247,11 +251,24 @@ body {
         padding: 0px 50px;
         .srv {
           display: flex;
+          transition: 0.5s;
+          padding: 10px;
+          border-radius: 10px;
           i {
             color: var(--MainColor1);
             margin-left: 50px;
             margin-top: 20px;
+            transition: 0.5s;
           }
+        }
+        .srv:hover {
+          transform: perspective(1000px) translate3d(-10px, -10px, 10px);
+          box-shadow: 10px 10px 15px;
+          background-color: #eee;
+          border: solid var(--MainColor1);
+        }
+        .srv:hover i {
+          text-shadow: #14f3dd 0px 0px 30px;
         }
       }
       .col:last-child {
@@ -305,17 +322,53 @@ body {
       aspect-ratio: 1 / 1;
       display: flex;
       justify-content: end;
-
-      .window-text {
-        background-color: #aaa;
-        padding: 0px 30px;
-      }
-
-      img {
-        width: 100%;
-        height: 80%;
-      }
+      border-radius: 20px;
+      box-shadow: 3px 3px 15px;
+      transition: 1s;
+      transition-timing-function: linear(
+        0 0%,
+        0 1.8%,
+        0.01 3.6%,
+        0.03 6.35%,
+        0.07 9.1%,
+        0.13 11.4%,
+        0.19 13.4%,
+        0.27 15%,
+        0.34 16.1%,
+        0.54 18.35%,
+        0.66 20.6%,
+        0.72 22.4%,
+        0.77 24.6%,
+        0.81 27.3%,
+        0.85 30.4%,
+        0.88 35.1%,
+        0.92 40.6%,
+        0.94 47.2%,
+        0.96 55%,
+        0.98 64%,
+        0.99 74.4%,
+        1 86.4%,
+        1 100%
+      );
     }
+
+    .window-text {
+      background-color: #eee;
+      padding: 0px 30px;
+      border-radius: 20px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+
+    img {
+      width: 100%;
+      height: 80%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  }
+  .window:hover {
+    transform: perspective(1000px) translate3d(10px, 10px, 10px) rotatey(10deg);
   }
 }
 
@@ -480,10 +533,9 @@ body {
   }
 
   .contant .contant-content .social span:last-child {
-  letter-spacing: 1px;
-  margin-left: 10px;
-  } 
-
+    letter-spacing: 1px;
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: 630px) and (max-width: 991px) {
